@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="2019_06_20_171328_create_playlist_videos_table.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_20_171328_create_playlist_videos_table.php">
+      <file leaf-file-name="2019_06_20_171912_create_video_tags_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_20_171912_create_video_tags_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+            <state relative-caret-position="504">
+              <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -61,6 +61,8 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_06_20_170508_create_video_republishes_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_06_20_170938_create_playlists_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_06_20_171328_create_playlist_videos_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_06_20_171710_create_tags_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_06_20_171912_create_video_tags_table.php" />
       </list>
     </option>
   </component>
@@ -227,12 +229,12 @@
       <option name="presentableId" value="Default" />
       <updated>1561025082283</updated>
       <workItem from="1561025085153" duration="3884000" />
-      <workItem from="1561045715853" duration="4295000" />
+      <workItem from="1561045715853" duration="4583000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8179000" />
+    <option name="totallyTimeSpent" value="8467000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -387,6 +389,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
           <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_20_171710_create_tags_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_20_171912_create_video_tags_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
         </state>
       </provider>
     </entry>
