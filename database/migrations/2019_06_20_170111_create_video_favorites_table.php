@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateVideoViewsTable extends Migration
+class CreateVideoFavoritesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class CreateVideoViewsTable extends Migration
      */
     public function up()
     {
-        Schema::create('video_views', function (Blueprint $table) {
+        Schema::create('video_favorites', function (Blueprint $table) {
             $table->bigIncrements('id');
-           
-            $table->unsignedBigInteger('user_id')->nullable();
+
+            $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users')
-                ->onDelete('set null')
+                ->onDelete('cascade')
                 ->onUpdate('cascade');
 
             $table->unsignedBigInteger('video_id');
@@ -41,6 +41,6 @@ class CreateVideoViewsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('video_views');
+        Schema::dropIfExists('video_favorites');
     }
 }
