@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="2019_06_20_170508_create_video_republishes_table.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_20_170508_create_video_republishes_table.php">
+      <file leaf-file-name="2019_06_20_170938_create_playlists_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_20_170938_create_playlists_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
-              <caret line="30" column="31" lean-forward="true" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+            <state relative-caret-position="396">
+              <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -59,6 +59,7 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_06_20_165503_create_video_views_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_06_20_170111_create_video_favorites_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_06_20_170508_create_video_republishes_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_06_20_170938_create_playlists_table.php" />
       </list>
     </option>
   </component>
@@ -225,12 +226,12 @@
       <option name="presentableId" value="Default" />
       <updated>1561025082283</updated>
       <workItem from="1561025085153" duration="3884000" />
-      <workItem from="1561045715853" duration="3800000" />
+      <workItem from="1561045715853" duration="4042000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7684000" />
+    <option name="totallyTimeSpent" value="7926000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -371,6 +372,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="548">
           <caret line="30" column="31" lean-forward="true" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_20_170938_create_playlists_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
         </state>
       </provider>
     </entry>
