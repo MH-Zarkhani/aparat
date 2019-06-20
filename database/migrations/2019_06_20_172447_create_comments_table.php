@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateVideoTagsTable extends Migration
+class CreateCommentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,23 +13,33 @@ class CreateVideoTagsTable extends Migration
      */
     public function up()
     {
-        Schema::create('video_tags', function (Blueprint $table) {
+        Schema::create('comments', function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            $table->unsignedBigInteger('tag_id');
-            $table->foreign('tag_id')
+            $table->unsignedBigInteger('parent_id')->nullable();
+            $table->foreign('parent_id')
+                ->references('id')
+                ->on('comments')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
+
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')
                 ->references('id')
                 ->on('users')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
             $table->unsignedBigInteger('video_id');
+
             $table->foreign('video_id')
                 ->references('id')
                 ->on('videos')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
+            $table->text('body');
+            $table->timestamp('accepted_at')->nullable();
             $table->timestamps();
         });
     }
@@ -41,6 +51,6 @@ class CreateVideoTagsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('video_tags');
+        Schema::dropIfExists('comments');
     }
 }

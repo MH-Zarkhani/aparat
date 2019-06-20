@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2243cdca-28e8-4ed8-ab8e-99130dbbf2b6" name="Default" comment="" />
+    <list default="true" id="2243cdca-28e8-4ed8-ab8e-99130dbbf2b6" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_06_20_171912_create_video_tags_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_06_20_171912_create_video_tags_table.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="2019_06_20_171912_create_video_tags_table.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_20_171912_create_video_tags_table.php">
+      <file leaf-file-name="2019_06_20_172447_create_comments_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_20_172447_create_comments_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+            <state relative-caret-position="284">
+              <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -63,6 +65,7 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_06_20_171328_create_playlist_videos_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_06_20_171710_create_tags_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_06_20_171912_create_video_tags_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_06_20_172447_create_comments_table.php" />
       </list>
     </option>
   </component>
@@ -229,12 +232,12 @@
       <option name="presentableId" value="Default" />
       <updated>1561025082283</updated>
       <workItem from="1561025085153" duration="3884000" />
-      <workItem from="1561045715853" duration="4583000" />
+      <workItem from="1561045715853" duration="5151000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8467000" />
+    <option name="totallyTimeSpent" value="9035000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -403,6 +406,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_20_172447_create_comments_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
         </state>
       </provider>
     </entry>
