@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2243cdca-28e8-4ed8-ab8e-99130dbbf2b6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_06_20_171912_create_video_tags_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_06_20_171912_create_video_tags_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="2019_06_20_172447_create_comments_table.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_20_172447_create_comments_table.php">
+      <file leaf-file-name="2019_06_21_102951_create_video_report_categories_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_21_102951_create_video_report_categories_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+            <state relative-caret-position="330">
+              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -66,6 +66,7 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_06_20_171710_create_tags_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_06_20_171912_create_video_tags_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_06_20_172447_create_comments_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_06_21_102951_create_video_report_categories_table.php" />
       </list>
     </option>
   </component>
@@ -178,7 +179,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -201,10 +201,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hotel" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -232,12 +234,13 @@
       <option name="presentableId" value="Default" />
       <updated>1561025082283</updated>
       <workItem from="1561025085153" duration="3884000" />
-      <workItem from="1561045715853" duration="5151000" />
+      <workItem from="1561045715853" duration="5305000" />
+      <workItem from="1561110996758" duration="1444000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9035000" />
+    <option name="totallyTimeSpent" value="10633000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -273,6 +276,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_20_172447_create_comments_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_20_114110_create_followers_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
@@ -339,20 +349,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_20_163428_create_videos_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_20_163847_create_videos_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_20_163428_create_videos_table.php" />
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_20_163847_create_videos_table.php" />
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_20_164149_create_videos_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -411,8 +409,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_20_172447_create_comments_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+        <state relative-caret-position="484">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_21_102951_create_video_report_categories_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
         </state>
       </provider>
     </entry>
