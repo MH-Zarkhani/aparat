@@ -10,13 +10,21 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+//    users types
+
+    const ADMIN_TYPE = 'admin';
+    const USER_TYPE = 'user';
+
+    const TYPES = [self::USER_TYPE,self::ADMIN_TYPE];
+
+    protected $table = 'users';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'type' , 'email', 'mobile' , 'password' , 'avatar' , 'website' , 'verify_code' ,'verified_at',
     ];
 
     /**
@@ -25,7 +33,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'verify_code',
     ];
 
     /**
@@ -34,6 +42,6 @@ class User extends Authenticatable
      * @var array
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
+        'verified_at' => 'datetime',
     ];
 }
