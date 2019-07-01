@@ -42,7 +42,7 @@ return [
         ],
 
         'api' => [
-            'driver' => 'token',
+            'driver' => 'passport',
             'provider' => 'users',
             'hash' => false,
         ],
@@ -99,5 +99,9 @@ return [
             'expire' => 60,
         ],
     ],
-
+    // config token expiration time in minute
+    'token_expiration' => [
+        'token' => env('TOKEN_EXPIRATION',14400), // 10 * 24 * 60 = 10 day
+        'refresh_token' => env('TOKEN_EXPIRATION',43200), // 30 * 24 * 60 = 30 day
+    ]
 ];
