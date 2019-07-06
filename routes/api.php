@@ -15,11 +15,21 @@ use Illuminate\Http\Request;
 
 Route::group(['namespace' => '\Laravel\Passport\Http\Controllers'], function ($router) {
     $router->post('login', [
-        'as' => 'login',
+        'as' => 'auth.login',
         'middleware' => ['throttle'],
         'uses' => 'AccessTokenController@issueToken',
     ]);
 });
+
+Route::post('register',[
+    'as' => 'auth.register',
+    'uses' => 'AuthController@register'
+]);
+
+Route::post('register-verify',[
+    'as' => 'auth.register.verify',
+    'uses' => 'AuthController@registerVerify'
+]);
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
