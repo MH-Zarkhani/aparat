@@ -21,8 +21,9 @@ class AuthController extends Controller
      */
     public function register(RegisterNewUserRequest $request)
     {
-        $field = $request->has('email') ? 'email' : 'mobile';
-        $value = $request->input($field);
+        $field = $request->getFieldName();
+        $value = $request->getFieldValue();
+        dd($field,$value);
         // check user exist
         $user = User::where($field, $value)->first();
 

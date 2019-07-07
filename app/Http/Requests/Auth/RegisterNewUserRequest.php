@@ -7,6 +7,7 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class RegisterNewUserRequest extends FormRequest
 {
+    use getRegisterFieldAndValueTrait;
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -26,7 +27,7 @@ class RegisterNewUserRequest extends FormRequest
     {
         return [
             //TODO: add mobile validation
-            'mobile' => ['required_without:email',new MobileRule],
+            'mobile' => ['required_without:email', new MobileRule],
             'email' => 'required_without:mobile|email',
         ];
     }
