@@ -13,11 +13,16 @@ use Illuminate\Support\Facades\Log;
 
 class AuthController extends Controller
 {
+    /**
+     * register user with email or mobile
+     * @param RegisterNewUserRequest $request
+     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response
+     * @throws UserAlreadyRegisteredException
+     */
     public function register(RegisterNewUserRequest $request)
     {
         $field = $request->has('email') ? 'email' : 'mobile';
         $value = $request->input($field);
-        $code = random_int(111111, 999999);
         // check user exist
         $user = User::where($field, $value)->first();
 
@@ -29,6 +34,7 @@ class AuthController extends Controller
             // code send before
             return response(['message' => 'کد فعالسازی قبلا برای شما ارسال شده است !'], 200);
         }
+        $code = random_int(111111, 999999);
         // create user and verify_code
         $user = User::create([
             $field => $value,
@@ -40,6 +46,11 @@ class AuthController extends Controller
         return response(['message' => 'کاربر ثبت موقت شد'], 200);
     }
 
+    /**
+     * verify user register
+     * @param RegisterVerifyUserRequest $request
+     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response
+     */
     public function registerVerify(RegisterVerifyUserRequest $request)
     {
         $field = $request->has('email') ? 'email' : 'mobile';
