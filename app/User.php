@@ -60,7 +60,6 @@ class User extends Authenticatable
 
     public function setMobileAttribute($value)
     {
-
         $this->attributes['mobile'] = toValidateMobileNumber($value);
     }
 }

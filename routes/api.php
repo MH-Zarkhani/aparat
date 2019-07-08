@@ -31,6 +31,11 @@ Route::post('register-verify',[
     'uses' => 'AuthController@registerVerify'
 ]);
 
+Route::post('register-verification-code',[
+    'as' => 'auth.register.resend.verification.code',
+    'uses' => 'AuthController@resendVerificationCode'
+]);
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });

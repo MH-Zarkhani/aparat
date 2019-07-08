@@ -101,9 +101,11 @@ return [
     ],
     // config token expiration time in minute
     'token_expiration' => [
-        'token' => env('TOKEN_EXPIRATION',14400), // 10 * 24 * 60 = 10 day
-        'refresh_token' => env('REFRESH_TOKEN_EXPIRATION',43200), // 30 * 24 * 60 = 30 day
+        'token' => env('TOKEN_EXPIRATION', 14400), // 10 * 24 * 60 = 10 day
+        'refresh_token' => env('REFRESH_TOKEN_EXPIRATION', 43200), // 30 * 24 * 60 = 30 day
     ],
     // register cache expiration time in minute
-    'register_cache_expiration' => env('REGISTER_CACHE_EXPIRATION',1440) // 24 * 60 = 1 day
+    'register_cache_expiration' => env('REGISTER_CACHE_EXPIRATION', 1440), // 24 * 60 = 1 day
+    // resend verification code diff in minute
+    'resend_verification_code_time_diff' => env('RESEND_VERIFICATION_CODE_TIME_DIFF',60)
 ];

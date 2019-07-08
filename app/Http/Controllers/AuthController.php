@@ -6,6 +6,7 @@ use App\Exceptions\RegisterVerificationException;
 use App\Exceptions\UserAlreadyRegisteredException;
 use App\Http\Requests\Auth\RegisterNewUserRequest;
 use App\Http\Requests\Auth\RegisterVerifyUserRequest;
+use App\Http\Requests\Auth\ResendVerificationCodeRequest;
 use App\User;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
@@ -35,7 +36,7 @@ class AuthController extends Controller
             // code send before
             return response(['message' => 'کد فعالسازی قبلا برای شما ارسال شده است !'], 200);
         }
-        $code = random_int(111111, 999999);
+        $code = randomVerificationCode();
         // create user and verify_code
         $user = User::create([
             $field => $value,
@@ -70,5 +71,29 @@ class AuthController extends Controller
         $user->save();
 
         return response($user, 200);
+    }
+
+    public function resendVerificationCode(ResendVerificationCodeRequest $request)
+    {
+        $field = $request->getFieldName();
+        $value = $request->getFieldValue();
+
+        $user = User::where($field,$value)->whereNull('verified_at')->first();
+        if (!empty($user)) {
+            $dateDiff = now()->diffInMinutes($user->updated_at);
+            if ($dateDiff > config('auth.resend_verification_code_time_diff')) {
+                $code = randomVerificationCode();
+                $user->verify_code = $code;
+                $user->save();
+            }else{
+                $code = $user->verify_code;
+            }
+            //TODO:: // send code to mobile or email
+            Log::info('RESEND-REGISTER-CODE-TO-USER',['code' => $code]);
+            return response([
+               'message' => 'کد مجددا ارسال گردید !'
+            ],200);
+        }
+        throw new ModelNotFoundException('کاربری یافت نشد یا قبلا فعالسازی شده است !');
     }
 }
