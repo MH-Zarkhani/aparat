@@ -36,6 +36,18 @@ Route::post('register-verification-code',[
     'uses' => 'AuthController@resendVerificationCode'
 ]);
 
+Route::post('change-email',[
+    'middleware' => ['auth:api'],
+    'as' => 'change.email',
+    'uses' => 'UserController@changeEmail'
+]);
+
+Route::post('change-email-submit',[
+    'middleware' => ['auth:api'],
+    'as' => 'change.email.submit',
+    'uses' => 'UserController@changeEmailSubmit'
+]);
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
