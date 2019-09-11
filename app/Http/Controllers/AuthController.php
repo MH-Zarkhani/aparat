@@ -10,6 +10,7 @@ use App\Http\Requests\Auth\ResendVerificationCodeRequest;
 use App\User;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
 class AuthController extends Controller
@@ -22,30 +23,41 @@ class AuthController extends Controller
      */
     public function register(RegisterNewUserRequest $request)
     {
-        $field = $request->getFieldName();
-        $value = $request->getFieldValue();
-        dd($field,$value);
-        // check user exist
-        $user = User::where($field, $value)->first();
+        try{
+            DB::beginTransaction();
+            $field = $request->getFieldName();
+            $value = $request->getFieldValue();
 
-        if ($user) {
-            // if user verified before
-            if ($user->verified_at) {
-                throw new UserAlreadyRegisteredException('شما قبلا ثبت نام کرده ایید !');
+            // check user exist
+            $user = User::where($field, $value)->first();
+
+            if ($user) {
+                // if user verified before
+                if ($user->verified_at) {
+                    throw new UserAlreadyRegisteredException('شما قبلا ثبت نام کرده ایید !');
+                }
+                // code send before
+                return response(['message' => 'کد فعالسازی قبلا برای شما ارسال شده است !'], 200);
             }
-            // code send before
-            return response(['message' => 'کد فعالسازی قبلا برای شما ارسال شده است !'], 200);
-        }
-        $code = randomVerificationCode();
-        // create user and verify_code
-        $user = User::create([
-            $field => $value,
-            'verify_code' => $code,
-        ]);
+            $code = randomVerificationCode();
+            // create user and verify_code
+            $user = User::create([
+                $field => $value,
+                'verify_code' => $code,
+            ]);
 
-        //Todo: send email or message to user
-        Log::info('SEND-REGISTER-CODE-MESSAGE-TO-USER', ['code' => $code]);
-        return response(['message' => 'کاربر ثبت موقت شد'], 200);
+            //Todo: send email or message to user
+            Log::info('SEND-REGISTER-CODE-MESSAGE-TO-USER', ['code' => $code]);
+
+            DB::commit();
+            return response(['message' => 'کاربر ثبت موقت شد'], 200);
+        }
+        catch (\Exception $exception)
+        {
+            Log::error($exception);
+            DB::rollBack();
+            return response(['message' => 'خطایی رخ داده است']);
+        }
     }
 
     /**

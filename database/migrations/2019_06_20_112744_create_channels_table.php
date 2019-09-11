@@ -23,7 +23,8 @@ class CreateChannelsTable extends Migration
                     ->onDelete('cascade')
                     ->onUpdate('cascade');
 
-            $table->text('info');
+            $table->string('name');
+            $table->text('info')->nullable();
             $table->string('banner')->nullable();
             $table->text('socials')->nullable();
             $table->timestamps();
