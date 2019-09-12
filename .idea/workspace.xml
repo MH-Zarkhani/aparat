@@ -4,9 +4,6 @@
     <list default="true" id="2243cdca-28e8-4ed8-ab8e-99130dbbf2b6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_06_20_112744_create_channels_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_06_20_112744_create_channels_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -137,13 +134,10 @@
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="205" />
-    <option name="y" value="15" />
-    <option name="width" value="994" />
-    <option name="height" value="658" />
-  </component>
   <component name="ProjectId" id="1Qh9YIEwvhsb94ZeF9M1krcUl3E" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -154,12 +148,13 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\MoHaMMaD-HaSaN\Desktop\aparat\app" />
+      <recent name="C:\Users\MoHaMMaD-HaSaN\Desktop\aparat\app\Http\Requests\Auth" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\MoHaMMaD-HaSaN\Desktop\aparat" />
       <recent name="C:\Users\MoHaMMaD-HaSaN\Desktop\aparat\app\Http\Requests\User" />
-      <recent name="C:\Users\MoHaMMaD-HaSaN\Desktop\aparat\app\Http\Requests\Auth" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\MoHaMMaD-HaSaN\Desktop\aparat\app\Http\Requests\Auth" />
     </key>
   </component>
@@ -202,7 +197,8 @@
       <workItem from="1562593320525" duration="8628000" />
       <workItem from="1562649748936" duration="3042000" />
       <workItem from="1568212008385" duration="608000" />
-      <workItem from="1568213637448" duration="6195000" />
+      <workItem from="1568213637448" duration="6857000" />
+      <workItem from="1568296197560" duration="5097000" />
     </task>
     <servers />
   </component>
